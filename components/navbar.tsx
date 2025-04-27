@@ -68,7 +68,7 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <Button className="bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-blue-500/30 transition-all duration-300 text-base px-6 py-5">
+            <Button className="bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-blue-500/30 transition-all duration-300 text-base px-6 py-5 transform hover:scale-105 hover:-translate-y-1 active:scale-95">
               <Link href="#contact">Get a Quote</Link>
             </Button>
           </nav>
@@ -102,7 +102,7 @@ export default function Navbar() {
                   {item}
                 </Link>
               ))}
-              <Button className="bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-blue-500/30 transition-all duration-300 w-full py-6 text-base">
+              <Button className="bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-blue-500/30 transition-all duration-300 w-full py-6 text-base transform hover:scale-[1.02] active:scale-95">
                 <Link href="#contact" onClick={toggleMenu}>
                   Get a Quote
                 </Link>

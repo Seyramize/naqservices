@@ -127,7 +127,9 @@ const testimonials = [
 ]
 
 // Section component for animations
-const Section = ({ children, id, className = "" }) => {
+import { ReactNode } from "react";
+
+const Section = ({ children, id, className = "" }: { children: ReactNode; id: string; className?: string }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px 0px" })
 
@@ -173,7 +175,7 @@ export default function Home() {
       {/* Hero Section */}
       <motion.section
         ref={heroRef}
-        className="relative h-screen flex items-center overflow-hidden bg-gradient-to-br from-black to-gray-900"
+        className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black to-gray-900"
         style={{
           opacity: heroOpacity,
           scale: heroScale,
@@ -192,16 +194,16 @@ export default function Home() {
           ></div>
         </div>
 
-        <div className="container mx-auto px-4 z-10 relative">
+        <div className="container mx-auto px-4 z-10 relative max-w-5xl">
           <div className="flex flex-col items-center text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-12 relative"
+              className="mb-8 relative"
             >
               <div className="relative">
-                <Image src="/logo.png" alt="NAQ's Services Logo" width={300} height={150} className="mx-auto" />
+                <Image src="/logo.png" alt="NAQ's Services Logo" width={250} height={125} className="mx-auto" />
                 <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 via-fuchsia-500 to-cyan-400 rounded-3xl blur-xl opacity-30 -z-10 animate-pulse"></div>
               </div>
             </motion.div>
@@ -210,7 +212,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
+              className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight"
             >
               Digital Excellence Redefined
             </motion.h1>
@@ -219,7 +221,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-2xl md:text-4xl text-blue-400 font-light mb-10 tracking-wide"
+              className="text-xl md:text-3xl text-blue-400 font-light mb-4 tracking-wide"
             >
               Transforming Ideas into Digital Realities
             </motion.h2>
@@ -228,36 +230,42 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-gray-300 max-w-3xl mb-12 text-xl leading-relaxed"
+              className="text-gray-300 max-w-3xl mb-6 text-lg leading-relaxed"
             >
               We are a dynamic IT and Graphic Design company delivering creative, tech-savvy solutions for individuals,
-              startups, and businesses. Whether you need stunning visuals or powerful digital systems, NAQ's Services is
-              your go-to digital partner.
+              startups, and businesses.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="flex flex-col sm:flex-row gap-6"
+              className="flex flex-col sm:flex-row gap-6 mt-2"
             >
-              <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-7 shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 rounded-xl"
-              >
-                <Link href="#services" className="flex items-center">
-                  Explore Our Services <ChevronRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-white border-white hover:bg-white/10 text-lg px-8 py-7 backdrop-blur-sm rounded-xl"
-              >
-                <Link href="#contact" className="flex items-center">
-                  Contact Us Today <ChevronRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
+              <Link href="#services" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-lg px-8 py-5 shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 rounded-xl relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1 active:scale-95"
+                >
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="flex items-center relative z-10">
+                    Explore Our Services{" "}
+                    <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
+                </Button>
+              </Link>
+              <Link href="#contact" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-lg px-8 py-5 shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 rounded-xl relative overflow-hidden group transform hover:scale-105 hover:-translate-y-1 active:scale-95"
+                >
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span className="flex items-center relative z-10">
+                    Contact Us Today{" "}
+                    <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -266,7 +274,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+          className="absolute bottom-24 left-1/2 transform -translate-x-1/2 animate-bounce"
         >
           <Link href="#about" className="text-white/70 hover:text-white">
             <svg
@@ -299,10 +307,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <p className="text-xl text-gray-700 leading-relaxed">
-                NAQ's Services was born out of pure passion and perseverance. Founded by Godfred Quaye in 2017 and
-                officially registered in 2024, the journey began with nothing but a phone and a dream. From designing
-                graphics and writing code on a mobile phone due to the inability to afford a laptop, Godfred built NAQ's
-                Services into a professional brand that empowers businesses with digital tools.
+                NAQ's Services was born out of pure passion and perseverance. Founded by Godfred Nii Aryee Quaye in 2017
+                and officially registered in 2024, the journey began with nothing but a phone and a dream. From
+                designing graphics and writing code on a mobile phone due to the inability to afford a laptop, Godfred
+                built NAQ's Services into a professional brand that empowers businesses with digital tools.
               </p>
               <h3 className="text-3xl font-bold text-gray-900">Who We Are</h3>
               <p className="text-xl text-gray-700 leading-relaxed">
@@ -314,7 +322,22 @@ export default function Home() {
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-10 rounded-2xl shadow-xl relative overflow-hidden group">
               <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-fuchsia-500 to-cyan-400 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
               <div className="relative">
-                <h3 className="text-3xl font-bold text-gray-900 mb-8">Founder: Godfred Quaye</h3>
+                <div className="mb-8 flex justify-center">
+                  <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-xl">
+                    <div className="absolute inset-0 -z-10 animate-spin-slow bg-gradient-to-r from-yellow-400 via-fuchsia-500 to-cyan-400 to-blue-500 to-green-400 rounded-full blur-md opacity-70"></div>
+                    <div className="absolute inset-2 bg-white rounded-full z-0"></div>
+                    <div className="absolute inset-3 overflow-hidden rounded-full z-10">
+                      <Image
+                        src="/founder.jpeg"
+                        alt="Godfred Nii Aryee Quaye - Founder of NAQ's Services"
+                        fill
+                        className="object-cover object-center scale-105"
+                        sizes="(max-width: 768px) 100vw, 256px"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-8">Founder: Godfred Nii Aryee Quaye</h3>
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                   With a strong foundation in IT and Visual Arts, Godfred combines technical depth with creative
                   brilliance. He has worked as a teacher, data analyst, gym instructor, and IT intern, all while
@@ -615,7 +638,7 @@ export default function Home() {
       </Section>
 
       {/* Why Choose Us Section */}
-      <Section className="bg-gray-50">
+      <Section id="why-choose-us" className="bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-black to-blue-600 bg-clip-text text-transparent">
@@ -855,7 +878,7 @@ export default function Home() {
                       placeholder="Your message"
                     ></textarea>
                   </div>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6 shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 rounded-xl">
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6 shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 rounded-xl transform hover:scale-[1.02] hover:-translate-y-1 active:scale-95">
                     Send Message
                   </Button>
                 </form>

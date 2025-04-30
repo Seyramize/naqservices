@@ -28,43 +28,46 @@ import {
 const projects = [
   {
     id: 1,
-    title: "Elegant E-commerce Platform",
-    category: "Web Development",
-    image: "/placeholder.svg?height=600&width=800",
-    description: "A fully responsive e-commerce platform with integrated payment systems and inventory management.",
+    title: "Full of Grace ENT Branding",
+    category: "Graphic Design",
+    image: "/projects/full-of-grace-ent.jpeg",
+    description:
+      "Brand identity and promotional banner design for a beverage distribution company featuring product showcase.",
     link: "#",
   },
   {
     id: 2,
-    title: "Corporate Brand Identity",
+    title: "Kingdom TV Network Business Card",
     category: "Graphic Design",
-    image: "/placeholder.svg?height=600&width=800",
-    description: "Complete brand identity package including logo design, business cards, and marketing materials.",
+    image: "/projects/kingdom-tv.jpeg",
+    description:
+      "Professional business card design for the Founder & CEO of Kingdom TV Network with elegant branding elements.",
     link: "#",
   },
   {
     id: 3,
-    title: "Healthcare Management System",
-    category: "Software Development",
-    image: "/placeholder.svg?height=600&width=800",
-    description: "Custom healthcare management system for tracking patient records and appointments.",
+    title: "Healthcare Provider Branding",
+    category: "Graphic Design",
+    image: "/projects/chemical-medicines.jpeg",
+    description:
+      "Clean and professional branding for a licensed chemical medicines seller in Ghana with medical symbolism.",
     link: "#",
   },
   {
     id: 4,
-    title: "Social Media Campaign",
+    title: "Salon Services Marketing",
     category: "Digital Marketing",
-    image: "/placeholder.svg?height=600&width=800",
-    description: "Comprehensive social media campaign that increased client engagement by 200%.",
+    image: "/projects/salon-services.jpeg",
+    description:
+      "Promotional banner design for a salon showcasing various beauty services with visual representations.",
     link: "#",
   },
   {
     id: 5,
-    title: "Mobile Banking Application",
-    category: "App Development",
-    image: "/placeholder.svg?height=600&width=800",
-    description:
-      "Secure and intuitive mobile banking application with biometric authentication and real-time notifications.",
+    title: "Organic Product Packaging",
+    category: "Graphic Design",
+    image: "/projects/shea-butter.jpeg",
+    description: "Product label design for organic shea butter featuring natural ingredients and product benefits.",
     link: "#",
   },
   {
@@ -769,7 +772,8 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Call or WhatsApp</h3>
-                  <p className="text-gray-700 text-lg">+233 227 462 371</p>
+                  <p className="text-gray-700 text-lg">+233 277 462 371</p>
+                  <p className="text-gray-700 text-lg">+1 (980) 361-9378</p>
                 </div>
               </div>
 

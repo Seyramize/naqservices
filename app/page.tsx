@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import Navbar from "@/components/navbar"
+import ContactForm from "@/components/contact-form"
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
 import {
   Phone,
@@ -22,59 +23,52 @@ import {
   Star,
   ExternalLink,
   Quote,
+  MessageCircle,
+  Ghost,
+  Music2,
 } from "lucide-react"
 
 // Project data
 const projects = [
   {
     id: 1,
-    title: "Full of Grace ENT Branding",
+    title: "Graphic Design Portfolio",
     category: "Graphic Design",
-    image: "/projects/full-of-grace-ent.jpeg",
+    image: "/projects/graphic-design-services.jpeg",
     description:
-      "Brand identity and promotional banner design for a beverage distribution company featuring product showcase.",
-    link: "#",
-  },
-  {
-    id: 2,
-    title: "Kingdom TV Network Business Card",
-    category: "Graphic Design",
-    image: "/projects/kingdom-tv.jpeg",
-    description:
-      "Professional business card design for the Founder & CEO of Kingdom TV Network with elegant branding elements.",
-    link: "#",
+      "A comprehensive collection of our graphic design works including logos, business cards, brochures, flyers, posters, and more.",
+    link: "https://drive.google.com/drive/folders/1GPRW3GusW0_ATQaxbEc7u3oMnBOmPLBo",
   },
   {
     id: 3,
-    title: "Healthcare Provider Branding",
-    category: "Graphic Design",
-    image: "/projects/chemical-medicines.jpeg",
-    description:
-      "Clean and professional branding for a licensed chemical medicines seller in Ghana with medical symbolism.",
+    title: "Healthcare Management System",
+    category: "Software Development",
+    image: "/placeholder.svg?key=ysrv2",
+    description: "Custom healthcare management system for tracking patient records and appointments.",
     link: "#",
   },
   {
     id: 4,
-    title: "Salon Services Marketing",
+    title: "Social Media Campaign",
     category: "Digital Marketing",
-    image: "/projects/salon-services.jpeg",
-    description:
-      "Promotional banner design for a salon showcasing various beauty services with visual representations.",
+    image: "/placeholder.svg?key=c9eab",
+    description: "Comprehensive social media campaign that increased client engagement by 200%.",
     link: "#",
   },
   {
     id: 5,
-    title: "Organic Product Packaging",
-    category: "Graphic Design",
-    image: "/projects/shea-butter.jpeg",
-    description: "Product label design for organic shea butter featuring natural ingredients and product benefits.",
+    title: "Mobile Banking Application",
+    category: "App Development",
+    image: "/placeholder.svg?key=y54fj",
+    description:
+      "Secure and intuitive mobile banking application with biometric authentication and real-time notifications.",
     link: "#",
   },
   {
     id: 6,
     title: "Educational Platform UI/UX",
     category: "UI/UX Design",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg?key=lyz9v",
     description:
       "User-centered design for an educational platform that improved student engagement and learning outcomes.",
     link: "#",
@@ -83,17 +77,8 @@ const projects = [
     id: 7,
     title: "Restaurant Ordering System",
     category: "Web Development",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg?key=jr0zr",
     description: "Contactless ordering system for restaurants with QR code menus and kitchen management interface.",
-    link: "#",
-  },
-  {
-    id: 8,
-    title: "Corporate Annual Report",
-    category: "Graphic Design",
-    image: "/placeholder.svg?height=600&width=800",
-    description:
-      "Visually compelling annual report design that effectively communicated company achievements and financials.",
     link: "#",
   },
 ]
@@ -130,9 +115,7 @@ const testimonials = [
 ]
 
 // Section component for animations
-import { ReactNode } from "react";
-
-const Section = ({ children, id, className = "" }: { children: ReactNode; id: string; className?: string }) => {
+const Section = ({ children, id, className = "" }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px 0px" })
 
@@ -551,12 +534,14 @@ export default function Home() {
                   <p className="text-gray-300 mb-6 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                     {project.description}
                   </p>
-                  <Link
+                  <a
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center text-white bg-blue-600/80 hover:bg-blue-600 py-2 px-4 rounded-lg transition-colors opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
                   >
                     View Details <ExternalLink className="ml-2 h-4 w-4" />
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             ))}
@@ -641,7 +626,7 @@ export default function Home() {
       </Section>
 
       {/* Why Choose Us Section */}
-      <Section id="why-choose-us" className="bg-gray-50">
+      <Section className="bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-black to-blue-600 bg-clip-text text-transparent">
@@ -799,7 +784,7 @@ export default function Home() {
 
               <div className="pt-6">
                 <h3 className="text-xl font-semibold mb-6">Follow Us</h3>
-                <div className="flex space-x-6">
+                <div className="flex flex-wrap gap-4">
                   <motion.a
                     whileHover={{ y: -5, scale: 1.1 }}
                     href="https://instagram.com/naqsservices"
@@ -827,6 +812,33 @@ export default function Home() {
                   >
                     <Linkedin className="h-7 w-7" />
                   </motion.a>
+                  <motion.a
+                    whileHover={{ y: -5, scale: 1.1 }}
+                    href="https://wa.me/233277462371"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-14 h-14 bg-green-600 rounded-2xl flex items-center justify-center text-white shadow-lg"
+                  >
+                    <MessageCircle className="h-7 w-7" />
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ y: -5, scale: 1.1 }}
+                    href="https://snapchat.com/add/naqsservices"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-14 h-14 bg-yellow-400 rounded-2xl flex items-center justify-center text-white shadow-lg"
+                  >
+                    <Ghost className="h-7 w-7" />
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ y: -5, scale: 1.1 }}
+                    href="https://tiktok.com/@naqsservices"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center text-white shadow-lg"
+                  >
+                    <Music2 className="h-7 w-7" />
+                  </motion.a>
                 </div>
               </div>
             </div>
@@ -835,57 +847,7 @@ export default function Home() {
               <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-fuchsia-500 to-cyan-400 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
               <div className="relative">
                 <h3 className="text-3xl font-bold mb-8">Send Us a Message</h3>
-                <form className="space-y-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                      <label htmlFor="name" className="block text-base font-medium text-gray-700 mb-2">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-lg"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-base font-medium text-gray-700 mb-2">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-lg"
-                        placeholder="Your email"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="subject" className="block text-base font-medium text-gray-700 mb-2">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-lg"
-                      placeholder="Subject"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-base font-medium text-gray-700 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={5}
-                      className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-lg"
-                      placeholder="Your message"
-                    ></textarea>
-                  </div>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6 shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 rounded-xl transform hover:scale-[1.02] hover:-translate-y-1 active:scale-95">
-                    Send Message
-                  </Button>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </div>

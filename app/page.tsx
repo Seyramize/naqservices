@@ -37,8 +37,8 @@ const projects = [
     category: "Graphic Design",
     image: "/projects/graphic-design-services.jpeg",
     description:
-      "A comprehensive collection of our graphic design works including logo1s, business cards, brochures, flyers, posters, and more.",
-    link: "https://drive.google.com/drive/folders/1GPRW3GusW0_ATQaxbEc7u3oMnBOmPLBo",
+      "A comprehensive collection of our graphic design works including logos, business cards, brochures, flyers, posters, and more.",
+    link: "https://sulky-cress-019.notion.site/NAQs-Services-2417be0ff09b80fd8fcefd3870b75a96?source=copy_link",
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const projects = [
     category: "Software Development",
     image: "/placeholder.svg?key=ysrv2",
     description: "Custom healthcare management system for tracking patient records and appointments.",
-    link: "#",
+    link: "https://sulky-cress-019.notion.site/NAQs-Services-2417be0ff09b80fd8fcefd3870b75a96?source=copy_link",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const projects = [
     category: "Digital Marketing",
     image: "/placeholder.svg?key=c9eab",
     description: "Comprehensive social media campaign that increased client engagement by 200%.",
-    link: "#",
+    link: "https://sulky-cress-019.notion.site/NAQs-Services-2417be0ff09b80fd8fcefd3870b75a96?source=copy_link",
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ const projects = [
     image: "/placeholder.svg?key=y54fj",
     description:
       "Secure and intuitive mobile banking application with biometric authentication and real-time notifications.",
-    link: "#",
+    link: "https://sulky-cress-019.notion.site/NAQs-Services-2417be0ff09b80fd8fcefd3870b75a96?source=copy_link",
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ const projects = [
     image: "/placeholder.svg?key=lyz9v",
     description:
       "User-centered design for an educational platform that improved student engagement and learning outcomes.",
-    link: "#",
+    link: "https://sulky-cress-019.notion.site/NAQs-Services-2417be0ff09b80fd8fcefd3870b75a96?source=copy_link",
   },
   {
     id: 7,
@@ -80,7 +80,7 @@ const projects = [
     category: "Web Development",
     image: "/placeholder.svg?key=jr0zr",
     description: "Contactless ordering system for restaurants with QR code menus and kitchen management interface.",
-    link: "#",
+    link: "https://sulky-cress-019.notion.site/NAQs-Services-2417be0ff09b80fd8fcefd3870b75a96?source=copy_link",
   },
 ]
 
@@ -198,7 +198,7 @@ export default function Home() {
               className="mb-8 relative"
             >
               <div className="relative">
-                <Image src="/logo1.png" alt="NAQ's Services logo1" width={250} height={125} className="mx-auto" />
+                <Image src="/logo1.png" alt="NAQ's Services logo" width={250} height={125} className="mx-auto" />
                 <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 via-fuchsia-500 to-cyan-400 rounded-3xl blur-xl opacity-30 -z-10 animate-pulse"></div>
               </div>
             </motion.div>
@@ -302,18 +302,32 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <p className="text-xl text-gray-700 leading-relaxed">
-              NAQs Services was born out of passion and perseverance. Founded by Godfred Nii Aryee Quaye in 2017 and officially registered in 2024, the journey began with nothing but a phone and a dream. From designing graphics and writing code on a mobile phone due to the inability to afford a laptop, Godfred built NAQs Services into a professional brand that empowers businesses with digital tools.
-
-The name NAQs reflects this personal story — derived from his own names: Nii (N), Aryee (A), Quaye (Q). It is more than a name; it represents heritage, resilience, and authenticity.
-
-The bold black “N” and “A” in the logo stand for structure, reliability, and technical expertise — the foundation of IT solutions. The sweeping red “S” flows like a flame, symbolizing creativity, energy, and transformation. Together, black and red balance strength with imagination:
-	•	Black = professionalism and trust
-	•	Red = vision and boldness
-
-At the heart of it all is our promise: “Making your idea visual.” Our logo and brand story are not just about design — they reflect a journey where technology meets creativity, and where perseverance turns ideas into impactful solutions.
-
-This is who we are.
-This is NAQs Services.
+                NAQs Services was born out of passion and perseverance. Founded by Godfred Nii Aryee Quaye in 2017 and
+                officially registered in 2024, the journey began with nothing but a phone and a dream. From designing
+                graphics and writing code on a mobile phone due to the inability to afford a laptop, Godfred built NAQs
+                Services into a professional brand that empowers businesses with digital tools.
+                <br />
+                <br />
+                The name NAQs reflects this personal story derived from his own names: Nii (N), Aryee (A), Quaye (Q). It
+                is more than a name; it represents heritage, resilience, and authenticity.
+                <br />
+                <br />
+                <br />
+                The bold black “N” and “A” in the logo stand for structure, reliability, and technical expertise, the
+                foundation of IT solutions. The sweeping red “S” flows like a flame, symbolizing creativity, energy, and
+                transformation. Together, black and red balance strength with imagination:
+                <br />• Black = professionalism and trust
+                <br />• Red = vision and boldness
+                <br />
+                <br />
+                At the heart of it all is our promise: “Making your idea visual.” Our logo and brand story are not just
+                about design, they reflect a journey where technology meets creativity, and where perseverance turns
+                ideas into impactful solutions.
+                <br />
+                <br />
+                This is who we are.
+                <br />
+                This is NAQs Services.
               </p>
               {/* <h3 className="text-3xl font-bold text-gray-900">Who We Are</h3>
               <p className="text-xl text-gray-700 leading-relaxed">
@@ -397,7 +411,7 @@ This is NAQs Services.
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <ChevronRight className="h-5 w-5 text-blue-600 mr-2" />
-                  <span className="text-lg">logo1 Design</span>
+                  <span className="text-lg">Logo Design</span>
                 </li>
                 <li className="flex items-center">
                   <ChevronRight className="h-5 w-5 text-blue-600 mr-2" />
@@ -853,7 +867,7 @@ This is NAQs Services.
             <div className="mb-10 md:mb-0">
               <div className="relative mb-6 inline-block">
                 <div className="bg-white rounded-xl p-3 shadow-xl">
-                  <Image src="/logo1.png" alt="NAQ's Services logo1" width={200} height={100} className="mb-0" />
+                  <Image src="/logo1.png" alt="NAQ's Services logo" width={200} height={100} className="mb-0" />
                 </div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 via-fuchsia-500 to-cyan-400 rounded-xl blur opacity-30 -z-10"></div>
               </div>

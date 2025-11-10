@@ -331,7 +331,7 @@ This is NAQs Services.
                     <div className="absolute inset-2 bg-white rounded-full z-0"></div>
                     <div className="absolute inset-3 overflow-hidden rounded-full z-10">
                       <Image
-                        src="/founder1.jpg"
+                        src="/founder2.jpg"
                         alt="Godfred Nii Aryee Quaye - Founder of NAQ's Services"
                         fill
                         className="object-cover object-center scale-105"

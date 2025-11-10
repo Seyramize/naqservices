@@ -27,6 +27,7 @@ import {
   Ghost,
   Music2,
 } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
 
 // Project data
 const projects = [
@@ -36,7 +37,7 @@ const projects = [
     category: "Graphic Design",
     image: "/projects/graphic-design-services.jpeg",
     description:
-      "A comprehensive collection of our graphic design works including logos, business cards, brochures, flyers, posters, and more.",
+      "A comprehensive collection of our graphic design works including logo1s, business cards, brochures, flyers, posters, and more.",
     link: "https://drive.google.com/drive/folders/1GPRW3GusW0_ATQaxbEc7u3oMnBOmPLBo",
   },
   {
@@ -115,7 +116,15 @@ const testimonials = [
 ]
 
 // Section component for animations
-const Section = ({ children, id, className = "" }) => {
+const Section = ({
+  children,
+  id,
+  className = "",
+}: {
+  children: React.ReactNode
+  id: string
+  className?: string
+}) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px 0px" })
 
@@ -189,7 +198,7 @@ export default function Home() {
               className="mb-8 relative"
             >
               <div className="relative">
-                <Image src="/logo.png" alt="NAQ's Services Logo" width={250} height={125} className="mx-auto" />
+                <Image src="/logo1.png" alt="NAQ's Services logo1" width={250} height={125} className="mx-auto" />
                 <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 via-fuchsia-500 to-cyan-400 rounded-3xl blur-xl opacity-30 -z-10 animate-pulse"></div>
               </div>
             </motion.div>
@@ -293,16 +302,24 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <p className="text-xl text-gray-700 leading-relaxed">
-                NAQ's Services was born out of pure passion and perseverance. Founded by Godfred Nii Aryee Quaye in 2017
-                and officially registered in 2024, the journey began with nothing but a phone and a dream. From
-                designing graphics and writing code on a mobile phone due to the inability to afford a laptop, Godfred
-                built NAQ's Services into a professional brand that empowers businesses with digital tools.
+              NAQs Services was born out of passion and perseverance. Founded by Godfred Nii Aryee Quaye in 2017 and officially registered in 2024, the journey began with nothing but a phone and a dream. From designing graphics and writing code on a mobile phone due to the inability to afford a laptop, Godfred built NAQs Services into a professional brand that empowers businesses with digital tools.
+
+The name NAQs reflects this personal story — derived from his own names: Nii (N), Aryee (A), Quaye (Q). It is more than a name; it represents heritage, resilience, and authenticity.
+
+The bold black “N” and “A” in the logo stand for structure, reliability, and technical expertise — the foundation of IT solutions. The sweeping red “S” flows like a flame, symbolizing creativity, energy, and transformation. Together, black and red balance strength with imagination:
+	•	Black = professionalism and trust
+	•	Red = vision and boldness
+
+At the heart of it all is our promise: “Making your idea visual.” Our logo and brand story are not just about design — they reflect a journey where technology meets creativity, and where perseverance turns ideas into impactful solutions.
+
+This is who we are.
+This is NAQs Services.
               </p>
-              <h3 className="text-3xl font-bold text-gray-900">Who We Are</h3>
+              {/* <h3 className="text-3xl font-bold text-gray-900">Who We Are</h3>
               <p className="text-xl text-gray-700 leading-relaxed">
                 We are not just tech experts or designers—we are storytellers, problem solvers, and visionaries. Our
                 mission is to help brands stand out and scale up using intelligent design and robust IT solutions.
-              </p>
+              </p> */}
             </div>
 
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-10 rounded-2xl shadow-xl relative overflow-hidden group">
@@ -310,11 +327,11 @@ export default function Home() {
               <div className="relative">
                 <div className="mb-8 flex justify-center">
                   <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-xl">
-                    <div className="absolute inset-0 -z-10 animate-spin-slow bg-gradient-to-r from-yellow-400 via-fuchsia-500 to-cyan-400 to-blue-500 to-green-400 rounded-full blur-md opacity-70"></div>
+                    <div className="absolute inset-0 -z-10 animate-spin-slow bg-gradient-to-r from-yellow-400 via-fuchsia-500 to-cyan-400 rounded-full blur-md opacity-70"></div>
                     <div className="absolute inset-2 bg-white rounded-full z-0"></div>
                     <div className="absolute inset-3 overflow-hidden rounded-full z-10">
                       <Image
-                        src="/founder.jpeg"
+                        src="/founder1.jpg"
                         alt="Godfred Nii Aryee Quaye - Founder of NAQ's Services"
                         fill
                         className="object-cover object-center scale-105"
@@ -380,7 +397,7 @@ export default function Home() {
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <ChevronRight className="h-5 w-5 text-blue-600 mr-2" />
-                  <span className="text-lg">Logo Design</span>
+                  <span className="text-lg">logo1 Design</span>
                 </li>
                 <li className="flex items-center">
                   <ChevronRight className="h-5 w-5 text-blue-600 mr-2" />
@@ -538,7 +555,7 @@ export default function Home() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-white bg-blue-600/80 hover:bg-blue-600 py-2 px-4 rounded-lg transition-colors opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
+                    className="inline-flex items-center text-white bg-blue-600/80 hover:bg-blue-600 py-2 px-4 rounded-lg transition-all"
                   >
                     View Details <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
@@ -626,7 +643,7 @@ export default function Home() {
       </Section>
 
       {/* Why Choose Us Section */}
-      <Section className="bg-gray-50">
+      <Section id="why-choose-us" className="bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-black to-blue-600 bg-clip-text text-transparent">
@@ -758,7 +775,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Call or WhatsApp</h3>
                   <p className="text-gray-700 text-lg">+233 277 462 371</p>
-                  <p className="text-gray-700 text-lg">+1 (980) 361-9378</p>
+                  <p className="text-gray-700 text-lg">+233 530 934 791</p>
                 </div>
               </div>
 
@@ -787,25 +804,17 @@ export default function Home() {
                 <div className="flex flex-wrap gap-4">
                   <motion.a
                     whileHover={{ y: -5, scale: 1.1 }}
-                    href="https://instagram.com/naqsservices"
+                    href="https://www.instagram.com/nii__ayi07?igsh=aHo4MmYwbnVxa25w&utm_source=qr"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-14 h-14 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-2xl flex items-center justify-center text-white shadow-lg"
                   >
                     <Instagram className="h-7 w-7" />
                   </motion.a>
+                  
                   <motion.a
                     whileHover={{ y: -5, scale: 1.1 }}
-                    href="https://facebook.com/naqsservices"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg"
-                  >
-                    <Facebook className="h-7 w-7" />
-                  </motion.a>
-                  <motion.a
-                    whileHover={{ y: -5, scale: 1.1 }}
-                    href="https://linkedin.com/company/naqsservices"
+                    href="https://www.linkedin.com/in/nii-aryee-5563341a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-14 h-14 bg-blue-800 rounded-2xl flex items-center justify-center text-white shadow-lg"
@@ -814,31 +823,14 @@ export default function Home() {
                   </motion.a>
                   <motion.a
                     whileHover={{ y: -5, scale: 1.1 }}
-                    href="https://wa.me/233277462371"
+                    href="https://wa.me/message/PTEIDOXZHVXRG1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-14 h-14 bg-green-600 rounded-2xl flex items-center justify-center text-white shadow-lg"
                   >
-                    <MessageCircle className="h-7 w-7" />
+                    <FaWhatsapp className="h-7 w-7" />
                   </motion.a>
-                  <motion.a
-                    whileHover={{ y: -5, scale: 1.1 }}
-                    href="https://snapchat.com/add/naqsservices"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-14 h-14 bg-yellow-400 rounded-2xl flex items-center justify-center text-white shadow-lg"
-                  >
-                    <Ghost className="h-7 w-7" />
-                  </motion.a>
-                  <motion.a
-                    whileHover={{ y: -5, scale: 1.1 }}
-                    href="https://tiktok.com/@naqsservices"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center text-white shadow-lg"
-                  >
-                    <Music2 className="h-7 w-7" />
-                  </motion.a>
+                 
                 </div>
               </div>
             </div>
@@ -861,7 +853,7 @@ export default function Home() {
             <div className="mb-10 md:mb-0">
               <div className="relative mb-6 inline-block">
                 <div className="bg-white rounded-xl p-3 shadow-xl">
-                  <Image src="/logo.png" alt="NAQ's Services Logo" width={200} height={100} className="mb-0" />
+                  <Image src="/logo1.png" alt="NAQ's Services logo1" width={200} height={100} className="mb-0" />
                 </div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 via-fuchsia-500 to-cyan-400 rounded-xl blur opacity-30 -z-10"></div>
               </div>

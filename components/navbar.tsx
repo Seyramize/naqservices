@@ -47,7 +47,7 @@ export default function Navbar() {
                 isScrolled ? "" : "bg-white/80 backdrop-blur-sm"
               } rounded-xl p-2 shadow-lg transform transition-all duration-500 hover:scale-105`}
             >
-              <Image src="/logo.png" alt="NAQ's Services Logo" width={180} height={90} className="h-14 w-auto" />
+              <Image src="/logo1.png" alt="NAQ's Services logo1" width={180} height={90} className="h-14 w-auto" />
               {!isScrolled && (
                 <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-fuchsia-500 to-cyan-400 rounded-xl blur opacity-30 -z-10 group-hover:opacity-50 transition duration-1000"></div>
               )}

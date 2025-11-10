@@ -301,6 +301,10 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
+              <h3 className="text-3xl font-bold text-gray-900 bg-gradient-to-r from-black to-blue-600 bg-clip-text text-transparent">Who We Are</h3>
+              <p className="text-xl text-gray-700 leading-relaxed">
+              We are not just tech experts or designers, we are storytellers, problem solvers, and visionaries. Our mission is to help brands stand out and scale up using intelligent design and robust IT solutions.
+              </p>
               <p className="text-xl text-gray-700 leading-relaxed">
                 NAQs Services was born out of passion and perseverance. Founded by Godfred Nii Aryee Quaye in 2017 and
                 officially registered in 2024, the journey began with nothing but a phone and a dream. From designing
@@ -311,15 +315,12 @@ export default function Home() {
                 The name NAQs reflects this personal story derived from his own names: Nii (N), Aryee (A), Quaye (Q). It
                 is more than a name; it represents heritage, resilience, and authenticity.
                 <br />
-                <br />
-                <br />
                 The bold black “N” and “A” in the logo stand for structure, reliability, and technical expertise, the
                 foundation of IT solutions. The sweeping red “S” flows like a flame, symbolizing creativity, energy, and
                 transformation. Together, black and red balance strength with imagination:
                 <br />• Black = professionalism and trust
                 <br />• Red = vision and boldness
-                <br />
-                <br />
+               
                 At the heart of it all is our promise: “Making your idea visual.” Our logo and brand story are not just
                 about design, they reflect a journey where technology meets creativity, and where perseverance turns
                 ideas into impactful solutions.
@@ -327,13 +328,8 @@ export default function Home() {
                 <br />
                 This is who we are.
                 <br />
-                This is NAQs Services.
+                <b>This is NAQs Services.</b>
               </p>
-              {/* <h3 className="text-3xl font-bold text-gray-900">Who We Are</h3>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                We are not just tech experts or designers—we are storytellers, problem solvers, and visionaries. Our
-                mission is to help brands stand out and scale up using intelligent design and robust IT solutions.
-              </p> */}
             </div>
 
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-10 rounded-2xl shadow-xl relative overflow-hidden group">

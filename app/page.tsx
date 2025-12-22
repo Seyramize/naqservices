@@ -35,7 +35,7 @@ const projects = [
     id: 1,
     title: "Graphic Design Portfolio",
     category: "Graphic Design",
-    image: "/projects/graphic-design-services.jpeg",
+    image: "/projects/grap.jpeg",
     description:
       "A comprehensive collection of our graphic design works including logos, business cards, brochures, flyers, posters, and more.",
     link: "https://sulky-cress-019.notion.site/NAQs-Services-2417be0ff09b80fd8fcefd3870b75a96?source=copy_link",
@@ -341,7 +341,7 @@ export default function Home() {
                     <div className="absolute inset-2 bg-white rounded-full z-0"></div>
                     <div className="absolute inset-3 overflow-hidden rounded-full z-10">
                       <Image
-                        src="/founder2.jpg"
+                        src="/newf.jpeg"
                         alt="Godfred Nii Aryee Quaye - Founder of NAQ's Services"
                         fill
                         className="object-cover object-center scale-105"
